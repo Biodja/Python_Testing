@@ -72,6 +72,7 @@ def purchase_places():
     )
    
     if purchase_is_valid:
+        
         selected_competition["numberOfPlaces"] = int(selected_competition["numberOfPlaces"]) - int(places_required)
         flash("Great-booking complete!")
         return render_template(

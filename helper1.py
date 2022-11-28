@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 from flask import flash
+from exceptions import EmailNotFound
 
 def load_clubs():
     with open("clubs.json") as file:
@@ -13,12 +14,14 @@ def load_competitions():
 
 
 def get_club_by_mail(mail: str):
-    selected_club = None
-    for club in CLUBS:
-        if club["email"] == mail:
-            selected_club = club
-            break
+    
+    try:
+        
+        selected_club = [club for club in CLUBS if club['email'] == mail][0]
 
+
+    except IndexError:
+        return None
     return selected_club
 
 

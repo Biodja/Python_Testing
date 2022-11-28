@@ -43,6 +43,11 @@
     * clubs.json - list of clubs with relevant information. You can look here to see what email addresses the app will accept for login.
 
 5. Testing
+    module utiliter: unittest
+
+    ```bash
+    python3 test.py -v
+    ```
 
     You are free to use whatever testing framework you like-the main thing is that you can show what tests you are using.
 
