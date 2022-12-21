@@ -39,6 +39,9 @@ def show_summary():
     return render_template("index.html")
 
 
+
+
+
 @app.route("/book/<competition>/<club>")
 def book(competition, club):
     selected_competition = HELPER.get_competition_by_name(name=competition)
