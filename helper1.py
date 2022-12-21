@@ -46,7 +46,7 @@ def get_competition_by_name(name: str):
 
 
 def get_max_places(club: dict):
-    return min(int(club["points"]), 12)
+    return min(int(club["points"]), 13)
 
 
 def is_competition_date_correct(date: str):
